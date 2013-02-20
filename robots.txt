@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://dennisg.github.com/madisondevelopment/sitemap.xml 

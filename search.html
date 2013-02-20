@@ -9,7 +9,7 @@
   <meta name="author" content="Dennis Geurts">
 
   
-  <meta name="description" content="Recent Posts GitHub Repos Status updating&#8230; @dennisg on GitHub $.domReady(function(){ if (!window.jXHR){ var jxhr = document.createElement(' &hellip;">
+  <meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dennisg.github.com/madisondevelopment/">
+  <link rel="canonical" href="http://dennisg.github.com/madisondevelopment/search.html">
   <link href="/madisondevelopment/favicon.png" rel="icon">
   <link href="/madisondevelopment/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/madisondevelopment/javascripts/modernizr-2.0.js"></script>
@@ -64,81 +64,22 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-    <article>
-    </article>
-
+      <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/madisondevelopment/images/loading.gif"></center>
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
 
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/dennisg">@dennisg</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
+<script type="text/javascript" src="/madisondevelopment/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
+</div>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-        github.showRepos({
-            user: 'dennisg',
-            count: 3,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/madisondevelopment/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("dennisgggg", 4, false);
-    });
-  </script>
-  <script src="/madisondevelopment/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/dennisgggg" class="twitter-follow-button" data-show-count="false">Follow @dennisgggg</a>
-  
-</section>
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/113269803670398336067?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
 
     </div>
   </div>
